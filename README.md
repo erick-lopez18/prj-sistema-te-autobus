@@ -1,3 +1,6 @@
+# Para el desarrollador
+Al descargar el proyecto, abre la carpeta del proyecto en terminal y ejecuta npm install para instalar las dependencias neceserias para el funcionamiento del sistema.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

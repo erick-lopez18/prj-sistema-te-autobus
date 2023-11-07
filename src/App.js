@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootswatch/dist/slate/bootstrap.css";
+import MainNav from './components/MainNav'
+import Home from './components/Home';
+import Transport from './components/Transport'
+import MapView from './components/MapView';
+import Student from './components/Student';
 
-function App() {
+const App = () => {
+
+  const studentInfo = {
+    fullName: 'Nombre completo del Estudiante',
+    instituteName: 'Nombre del instituto',
+    studentNumber: 'Número de control',
+    instituteAddress: 'Dirección del instituto',
+    activeSemester: 'Semestre activo',
+    credentialPhoto: './images/credencial-frente-18211927.jpg',
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <BrowserRouter>
+        <MainNav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/transport" element={<Transport />} />
+          <Route path="/map-view" element={<MapView />} />
+          <Route path="/student-id" element={<Student {...studentInfo} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
