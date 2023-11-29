@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import mapboxgl from 'mapbox-gl';
 import "mapbox-gl/dist/mapbox-gl.css"
 
-const MapView = () => {
+const MapMain = () => {
   useEffect(() => {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZXJpY2stbG9wZXoxOCIsImEiOiJjbG9vOGU2d3oxampuMnFtbzRuN2Q4bmF2In0.bGxgR7zlBV5S8m2b-CEKQQ'; // Reemplaza 'TU_TOKEN_DE_MAPBOX' con tu token de acceso
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZXJpY2stbG9wZXoxOCIsImEiOiJjbHBndzRwa3kwMXVzMmxxZHZzbm1rYnNuIn0.VyeTsggn6nXRogPd_amcfg'; // Reemplaza 'TU_TOKEN_DE_MAPBOX' con tu token de acceso
 
     // Función para crear el mapa con las coordenadas especificadas
     const createMap = (coordinates) => {
@@ -12,8 +12,11 @@ const MapView = () => {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
         center: coordinates, // Coordenadas iniciales
-        zoom: 12, // Nivel de zoom inicial
+        zoom: 13, // Nivel de zoom inicial
+        navigationControl: true,
       });
+
+      map.addControl(new mapboxgl.NavigationControl());
 
       // Limpia el mapa cuando el componente se desmonta
       return () => map.remove();
@@ -37,13 +40,13 @@ const MapView = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Vista de mapa</h1>
+    <div className='App-div'>
+      <h1 className='App-title'>Observa nuestras rutas</h1>
       {/* Integra aquí tu mapa, por ejemplo, con Mapbox */}
-      <div id="map" style={{ width: '100%', height: '400px' }}></div>
+      <div id="map" style={{ width: '100%', height: '600px',  }}></div>
     </div>
     
   );
 };
 
-export default MapView;
+export default MapMain;

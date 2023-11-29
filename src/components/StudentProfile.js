@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Student = ({ fullName, instituteName, studentNumber, activeSemester, instituteAddress, credentialPhoto }) => {
+const StudentProfile = ({ fullName, instituteName, studentNumber, activeSemester, instituteAddress, credentialPhoto }) => {
   return (
-    <div className="student-card">
+    <div className="App-div student-card">
       <div className="student-photo">
         <img src="${require('{credentialPhoto}')" alt="Credencial del estudiante" />
       </div>
@@ -17,4 +17,4 @@ const Student = ({ fullName, instituteName, studentNumber, activeSemester, insti
   );
 };
 
-export default Student;
+export default StudentProfile;

@@ -1,8 +1,132 @@
 .App {
   text-align: center;
   color: black;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* Fuentes de la aplicación */
+@import url("https://use.typekit.net/qmd6kzg.css");
+
+/* Estilos de la aplicación */
+.App-navBrand {
+  font-family: ibm-plex-sans, sans-serif;
+font-weight: 800;
+font-size: 1.6em;
+color: black;
+}
+
+.App-navBar {
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1 );
+  font-family: ibm-plex-sans, sans-serif;
+font-weight: 400;
+font-style: normal;
+  background-color: #c6ddf0 !important;
+  min-height: 8vh;
+  font-size: 1.2em;
+  color: black;
+  padding-top: calc(4vh - 1.2em);
+}
+
+.App-navbar-nav .App-nav-item .App-nav-link:hover {
+  color: #996888 !important; /* Reemplaza #your-hover-color con el color que desees */
+}
+
+
+.App-title {
+  font-family: ibm-plex-sans, sans-serif;
+font-weight: 800;
+font-style: normal;
+  font-size: 3em;
+  color: black;
+  padding-top: 40px;
+}
+
+.App-subtitle {
+  font-family: ibm-plex-sans, sans-serif;
+font-weight: 600;
+font-style: normal;
+  font-size: 2em;
+  color: black;
+  padding-top: 30px;
+}
+
+.App-button {
+  font-family: ibm-plex-sans, sans-serif;
+font-weight: 400;
+font-style: normal;
+  background-color: #40484D;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: 2px solid #040F0F;
+  padding: 10px;
+  margin-inline: 5px;
+}
+
+.App-div {
+  background-color: #efefef;
+  color: black;
+  padding-bottom: 20px;
+  flex-grow: 1;
+  font-family: acumin-pro, sans-serif;
+font-weight: 400;
+font-style: normal;
+padding-top: 100px;
+}
+
+/* Estilos del pie de página */
+.App-footer {
+  font-family: ibm-plex-sans, sans-serif;
+  font-weight: 400;
+  background-color: #996888;
+  min-height: 10vh;
+  color: white;
+  padding: 10px;
+  border-top: 5px solid #40484D;
+}
+
+.App-footerBrand {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.App-footerSeparator {
+  border-bottom: 2px solid #d89a9e;
+  margin-bottom: 10px; /* Ajusta este valor según tu preferencia */
+}
+
+.App-footerContact {
+  margin-bottom: 16px;
+}
+
+.App-footerContact-label {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.App-footerContact-info {
+  font-size: 1.0em;
+  margin-bottom: 2px;
+}
+
+.App-footerCopyright {
+  font-size: 0.8em;
+  color: #EFEFEF;
+  margin-bottom: 5px;
+  background-color: #5e4955;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilos de ReactJS */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
