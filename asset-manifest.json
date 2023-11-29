@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/te-bus/static/css/main.817a5b31.css",
+    "main.js": "/te-bus/static/js/main.51175ab2.js",
+    "static/js/787.12a6e912.chunk.js": "/te-bus/static/js/787.12a6e912.chunk.js",
+    "index.html": "/te-bus/index.html",
+    "main.817a5b31.css.map": "/te-bus/static/css/main.817a5b31.css.map",
+    "main.51175ab2.js.map": "/te-bus/static/js/main.51175ab2.js.map",
+    "787.12a6e912.chunk.js.map": "/te-bus/static/js/787.12a6e912.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.817a5b31.css",
+    "static/js/main.51175ab2.js"
+  ]
+}
